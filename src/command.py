@@ -47,8 +47,8 @@ def do_craft(cmd_tool):
     print(f'Crafting with {cmd_tool} ({level}).\n{settings.CRAFT_PROMPT}', end='')
     raw_input = input()
     if len(raw_input) == 0:
-        print(colors.YELLOW('Warning: no ingredients specified. Aborting'))
-        return
+        # Use all items in the inventory as inputs.
+        raw_input = ' '.join([item.name for item in settings.INV.items])
 
     valid_recipes, num_times = crafting.search(objs.Tool(cmd_tool, level), raw_input)
     if len(valid_recipes) == 0:
