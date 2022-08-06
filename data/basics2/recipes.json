@@ -1,0 +1,24 @@
+[
+    {
+        "outputs": [
+            {
+                "name": "Treated_Voda",
+                "amount": 4
+            }
+        ],
+        "tool": {
+            "name": "Boiler",
+            "level": 0
+        },
+        "inputs": [
+            {
+                "name": "Voda",
+                "amount": 4
+            },
+            {
+                "name": "Meel",
+                "amount": 1
+            }
+        ]
+    }
+]

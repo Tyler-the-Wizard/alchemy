@@ -1,0 +1,126 @@
+[
+    {
+        "outputs": [
+            {
+                "name": "Sourcebrick",
+                "amount": 1
+            }
+        ],
+        "tool": {
+            "name": "Workbench",
+            "level": 0
+        },
+        "inputs": [
+            {
+                "name": "Source",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "outputs": [
+            {
+                "name": "Cup",
+                "amount": 1
+            }
+        ],
+        "tool": {
+            "name": "Workbench",
+            "level": 0
+        },
+        "inputs": [
+            {
+                "name": "Sourcebrick",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "outputs": [
+            {
+                "name": "Cloution",
+                "amount": 1
+            }
+        ],
+        "tool": {
+            "name": "Mortar",
+            "level": 1
+        },
+        "inputs": [
+            {
+                "name": "Source",
+                "amount": 1
+            },
+            {
+                "name": "Cup",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "outputs": [
+            {
+                "name": "Cloudbrick",
+                "amount": 1
+            }
+        ],
+        "tool": {
+            "name": "Workbench",
+            "level": 0
+        },
+        "inputs": [
+            {
+                "name": "Sourcebrick",
+                "amount": 1
+            },
+            {
+                "name": "Cloution",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "outputs": [
+            {
+                "name": "Cloudleaf",
+                "amount": 1
+            }
+        ],
+        "tool": {
+            "name": "Workbench",
+            "level": 0
+        },
+        "inputs": [
+            {
+                "name": "Cloudbrick",
+                "amount": 1
+            },
+            {
+                "name": "Sourcebrick",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "outputs": [
+            {
+                "name": "Voda",
+                "amount": 1
+            },
+            {
+                "name": "Meel",
+                "amount": 1
+            }
+        ],
+        "tool": {
+            "name": "Filter",
+            "level": 1
+        },
+        "inputs": [
+            {
+                "name": "Source",
+                "amount": 2
+            }
+        ]
+    }
+]

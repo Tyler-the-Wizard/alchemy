@@ -1,0 +1,37 @@
+#!/cygdrive/c/Users/nemur/AppData/Local/Programs/Python/Python310/python.exe
+import signal, sys, time
+from src import settings, colors
+settings.init()
+
+if '--debug' in sys.argv:
+    settings.DEBUG_MODE = True
+    sys.argv.remove('--debug')
+    print(colors.RED('*** Debug mode enabled. ***'))
+
+from src import command, disk
+
+def C_c_handler(*_):
+    ensure_save()
+    exit(1)
+signal.signal(signal.SIGINT, C_c_handler)
+
+def ensure_save():
+    if settings.UNSAVED_CHANGES:
+        save_dir = settings.CURRENT_SAVE or str(time.time_ns())[-10:-4] + '_BKP'
+        print(f'\n{colors.RED("Warning!")} Unsaved changes - performing emergency save to {save_dir}')
+        disk.save_all(f'{settings.SAVE_DIR}/{save_dir}')
+
+def main():
+    print('Alchemy v' + settings.VERSION)
+
+    if len(sys.argv) > 1:
+        if disk.usr_load(sys.argv[1].title()):
+            print('File loaded.')
+    else:
+        disk.load_all(settings.DATA_DIR + '/basics1')
+
+    command.loop()
+    ensure_save()
+
+if __name__ == '__main__':
+    main()

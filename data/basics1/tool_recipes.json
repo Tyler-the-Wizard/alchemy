@@ -1,0 +1,38 @@
+[
+    {
+        "output": {
+            "name": "Mortar",
+            "level": 1
+        },
+        "tool": {
+            "name": "Workbench",
+            "level": 0
+        },
+        "inputs": [
+            {
+                "name": "Sourcebrick",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "output": {
+            "name": "Filter",
+            "level": 1
+        },
+        "tool": {
+            "name": "Workbench",
+            "level": 0
+        },
+        "inputs": [
+            {
+                "name": "Sourcebrick",
+                "amount": 4
+            },
+            {
+                "name": "Cloudleaf",
+                "amount": 3
+            }
+        ]
+    }
+]

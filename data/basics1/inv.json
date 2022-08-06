@@ -1,0 +1,15 @@
+{
+    "items": [
+        {
+            "name": "Source",
+            "amount": -1
+        }
+    ],
+    "tools": [
+        {
+            "name": "Workbench",
+            "level": 0
+        }
+    ],
+    "checks": []
+}
